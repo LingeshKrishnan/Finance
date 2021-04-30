@@ -14,15 +14,15 @@
                     </div>
                     <form>
                         <div class="form-group">
-                            <label for="name">Fullname: </label>
+                            <label for="name">Name: </label>
                             <input type="text" name="name" id="name" placeholder="Enter your Fullname" required />
                         </div>
                         <div class="form-group">
-                            <label for="email">Email: </label>
+                            <label for="email">E-mail: </label>
                             <input type="text" name="email" id="email" placeholder="Enter your mail address" required />
                         </div>
                         <div class="form-group">
-                            <label for="number">Phone Number: </label>
+                            <label for="number">Phone: </label>
                             <input type="text" name="number" id="number" placeholder="Enter your Phone Number" required />
                         </div>
                     </form>
@@ -39,11 +39,10 @@
                                 var profile = googleUser.getBasicProfile();
                                 // Useful data for your client-side scripts:
                                 console.log('Full Name: ' + JSON.stringify(profile));
-                                document.querySelector('#content').innerText = 'Singned in as '+googleUser.getBasicProfile().getName();
+                                document.querySelector('#content').innerText = googleUser.getBasicProfile().getName();
                             }
                             </script>
-                <div class="content" id="content">
-            </div>
+               
                 </div>
            
              

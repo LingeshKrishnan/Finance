@@ -7,10 +7,18 @@ nav.navbar.navbar-expand-lg{
 .nav-item a{
     color: black;
     text-transform: uppercase;
+    font-weight: 600;
+}
+.content {
+    color: black;
+    font-weight: 600;
 }
 
 .navbar-brand {
-   
+    color:#275929;
+    font-weight:900;
+}
+.navbar-brand :hover{
     color:#275929;
     font-weight:900;
 }
