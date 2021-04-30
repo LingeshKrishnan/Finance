@@ -1,15 +1,23 @@
 body {
     background-color: white;
 }
-nav{
+nav.navbar.navbar-expand-lg{
     background:white;
-  opacity: 90%;
-}
+   }
 .nav-item a{
     color: black;
+    text-transform: uppercase;
 }
+
 .navbar-brand {
    
     color:#275929;
     font-weight:900;
+}
+li {
+    list-style: none;
+}
+.nav-item a:hover{
+   background:green;
+   color: white;
 }

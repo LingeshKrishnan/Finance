@@ -28,4 +28,11 @@ class MainController extends AbstractController
             'name' => $name,
         ]);
     }
+
+    /**
+     * @Route("/registration", name="registration")
+     */
+    public function registration(){
+        return $this->render('/home/registration.html.twig');
+    }
 }
