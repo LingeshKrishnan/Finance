@@ -1,0 +1,15 @@
+body {
+    background-color: white;
+}
+nav{
+    background:white;
+  opacity: 90%;
+}
+.nav-item a{
+    color: black;
+}
+.navbar-brand {
+   
+    color:#275929;
+    font-weight:900;
+}
