@@ -3,16 +3,42 @@
        Aathiran Fin
 {% endblock title%}
 {% block body %}
+<section id="overview" class="overview">
+<div class="container" style="font-size: 18px;">
        <h1>Overview about Aathiran Fin</h1>
        <p>Founded in the year 2021 by Lingeshwaran Krishnan while having spark in his mind that "how can we manage his finance?".<br/>
        You can enjoy creating 'n' number of users subscription.<br/>
        Kindly support us during this starting phase. We assure you that we will give you satisfactory service.
+</div>
+</section>
+       <section id="first">
+                     <div class="row">
+                     <div class="col-lg-6 col-md-6 col-sm-6">
+                             <img src="{{asset('images/logo1.png')}}"></img>
+                     </div>
 
-       <div class="container">
-        <img src="{{asset('images/logo1.png')}}"></img>
-       </div>
-     
-        
+                     <div class="col-lg-6 col-md-6 col-sm-6" id="contact">
+                            <h3>Send us Query</h3>
+                              <form id="contactform">
+                                  <div class="form-group">
+                                          <input type="text" name="name" id="name" placeholder="Enter your Fullname" required />
+                                   </div>
+                                   <div class="form-group">          
+                                          <input type="text" name="email" id="email" placeholder="Enter your mail address" required />
+                                   </div>
+                                   <div class="form-group">
+                                          <input type="message" name="number" id="number" placeholder="Enter Phone Number" required />
+                                   </div>
+                                   <div class="form-group">
+                                          <textarea id="message" class="message" name="message" placeholder="Enter your message here"></textarea>
+                                   </div>
+                                   <div class="form-group">
+                                          <button type="submit" id="query_btn" class="btn btn-lg btn-success">Send Query</button>
+                                   </div>
+                            </form>    
+                     </div>
+              </div>         
+       </section>
 {% endblock %}
 
         

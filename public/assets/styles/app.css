@@ -1,13 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,300;0,700;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
 body {
     background-color: white;
+   
 }
 nav.navbar.navbar-expand-lg{
-    background:white;
+    background:linear-gradient(white,black) ;
    }
 .nav-item a{
     color: black;
     text-transform: uppercase;
     font-weight: 600;
+}
+#overview{
+    font-family: 'Lobster', cursive;
+    color: black;
+    font-weight: 400;
+}
+#regform{
+    background: url('../images/finance.png');
+    color: #275929;
 }
 .content {
     color: black;
@@ -28,4 +40,52 @@ li {
 .nav-item a:hover{
    background:green;
    color: white;
+}
+#reg_form{
+    margin-left: 70px;
+    margin-top: 50px;
+}
+#contact h3{
+    margin-top: 30px;
+    font-weight: 600;
+    margin-left: 60px;
+}
+#message{
+    padding: 40px 100px 40px;
+}
+#query_btn{
+    margin-left: 100px;
+}
+#contactform{
+    margin-top: 50px;
+}
+input#name, input#email, input#number {
+    border: none;
+    border-bottom: 1px solid black;
+    padding: 10px 88px 10px;
+}
+h5{
+    margin-top: 80px;
+    margin-left: 170px;
+}
+.g-signin2 {
+   margin-top: 20px;
+    margin-left: 220px;
+}
+#registrationform, #loginpanel{
+    font-family: 'Josefin Sans', sans-serif;
+    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    border: 1px solid black;   
+}
+#registrationform h3, #loginpanel h3,h5{
+    font-weight: 800;
+}
+#register_btn{
+    margin-left: 100px;
+}
+
+.footer{
+    background: linear-gradient(black,white);
 }
