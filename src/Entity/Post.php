@@ -22,7 +22,36 @@ class Post
      */
     private $Name;
 
-   
+    /**
+     * @ORM\Column(type="integer")
+     */
+    private $PhoneNumber;
+
+    /**
+     * @ORM\Column(type="string", length=40)
+     */
+    private $Email;
+
+    /**
+     * @ORM\Column(type="string", length=100, nullable=true)
+     */
+    private $Address;
+
+    /**
+     * @ORM\Column(type="string", length=15)
+     */
+    private $Username;
+
+    /**
+     * @ORM\Column(type="string", length=20)
+     */
+    private $Password;
+
+    /**
+     * @ORM\Column(type="string", length=100)
+     */
+
+  
 
     public function getId(): ?int
     {
@@ -41,7 +70,67 @@ class Post
         return $this;
     }
 
-   
+    
+
+    public function getPhoneNumber(): ?int
+    {
+        return $this->PhoneNumber;
+    }
+
+    public function setPhoneNumber(int $PhoneNumber): self
+    {
+        $this->PhoneNumber = $PhoneNumber;
+
+        return $this;
+    }
+
+    public function getEmail(): ?string
+    {
+        return $this->Email;
+    }
+
+    public function setEmail(string $Email): self
+    {
+        $this->Email = $Email;
+
+        return $this;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->Address;
+    }
+
+    public function setAddress(?string $Address): self
+    {
+        $this->Address = $Address;
+
+        return $this;
+    }
+
+    public function getUsername(): ?string
+    {
+        return $this->Username;
+    }
+
+    public function setUsername(string $Username): self
+    {
+        $this->Username = $Username;
+
+        return $this;
+    }
+
+    public function getPassword(): ?string
+    {
+        return $this->Password;
+    }
+
+    public function setPassword(string $Password): self
+    {
+        $this->Password = $Password;
+
+        return $this;
+    }
 
    
 }

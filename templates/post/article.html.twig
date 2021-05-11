@@ -19,34 +19,20 @@
                     <tr>
                     <td>Id</td>
                     <td>Name</td>
-                    <td>PhoneNumber</td>
-                    <td>Email</td>
-                    <td>Address</td>
-                    <td>Username</td>
+                   
                     <td>Action</td>
                     </tr>
                 </thead>
                 <tbody>
-                    {% for post in posts %}
+                    {% for articleform in articleform %}
                     <tr>
-                        <td>{{post.id}}</td>
+                        <td>{{article.id}}</td>
                         <td>
                         <a href="{{path('post.show',{id: post.id})}}">
-                        {{post.name}}
+                        {{articleform.name}}
                         </a>
                         </td>
-                        <td>
-                        {{post.PhoneNumber}}
-                        </td>
-                         <td>
-                        {{post.Email}}
-                        </td>
-                         <td>
-                        {{post.Address}}
-                        </td>
-                         <td>
-                        {{post.Username}}
-                        </td>
+                       
                         <td>
                         <a href="{{path('post.delete', {id: post.id})}}" class="text-danger">Delete</a>
                         </td>

@@ -7,7 +7,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Request;
 use App\Entity\Post;
+use App\Entity\Article;
 use App\Repository\PostRepository;
+use App\Repository\ArticleRepository;
+use App\Form\LoginType;
 
 /**
      * @Route("/post", name="post.")
@@ -22,6 +25,7 @@ class PostController extends AbstractController
     public function index(PostRepository $postRepository)
     {
         $posts = $postRepository->findAll();
+      
         return $this->render('post/index.html.twig', [
           'posts' => $posts
         ]);
@@ -32,19 +36,63 @@ class PostController extends AbstractController
      * @param Request $request
      * @return response
      */
-    public function create(Request $request) {
-       //new post Name
-       $Post = new Post();
+    // public function create(Request $request) {
+    //    //new post Name
+    //    $Post = new Post();
+    //   $registration_form = $this->createForm(LoginType::class,$Post);
 
-       $Post -> setName('Lingesh');
+    //    //EntityManager
+    //    $em = $this->getDoctrine()->getManager();
 
-       //EntityManager
-       $em = $this->getDoctrine()->getManager();
+    //   //  $em->persist($Post);
+    //   //  $em->flush();
 
-       $em->persist($Post);
-       $em->flush();
+    //    //return
+    //    return $this->render('/registration.html.twig',[
+    //      'regform' => $registration_form->createView()
+    //    ]);
+    // }
 
-       //return
-       return new Response('Name Inserted');
+    /**
+     * @Route("/show/{id}", name="show")
+     * @param Post $post
+     * @return Response
+     */
+    public function show(Post $post){
+      dump($post);
+      die;
+      return $this->render('post/show.html.twig',[
+        'post'=> $post
+      ]);
     }
+    
+    /**
+     * @Route("/delete/{id}", name="delete")
+     * @param Post $post
+     * @return Response
+     */
+    public function remove(Post $post){
+      $em = $this->getDoctrine()->getManager();
+      $em->remove($post);
+      $em->flush();
+      $this->addFlash('success','Id deleted successfully');
+
+      return $this->redirect($this->generateUrl('post.index'));
+
+  }
+
+  /**
+   * @Route("/articles", name="articles")
+   * @param ArticleRepository $Articlerepo
+   * @return Response
+   */
+  public function articles(ArticleRepository $Articlerepo){
+
+    $articles = $Articlerepo->findAll();
+
+    return $this->render('post/article.html.twig',[
+      'articles' => $articles
+    ]);
+
+  }
 }

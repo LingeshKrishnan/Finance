@@ -1,0 +1,63 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Regiistered Redirection{% endblock %}
+
+{% block body %}
+
+        <div class="container">
+            
+                    {% for article in articles %}
+                   
+                  
+                    <tr>
+                    <td>Article Id<td><hr>
+                        <td align="center">{{article.id}}</td>
+                    </tr>
+                    <hr>
+                    <tr>
+                    <td>
+                        <td>Posted By</td><hr>
+                        <td align="center">
+                        <a href="#">
+                        {{article.authorname}}
+                        </a>
+                        </td>
+                        
+                    </tr>
+                    <hr>
+                    <tr>
+                        <td>
+                            Poster
+                        </td><hr>
+                        <td align="center">
+                            <img src="{{ '/uploads/'~article.image }}" alt="No Image Available">
+                        </td>
+                    </tr>
+                    <hr>
+                    <tr>
+                        <td>
+                            Article Content
+                        </td><hr>
+
+                        <td align="center">
+                            {{article.article}}
+                        </td>
+
+                    </tr>
+                      <hr>                 
+                    <tr>
+                    <td>
+                     Author Contact
+                    </td><hr>
+                    <td align="center">
+                            {{article.contact}}
+                    </td>
+                    </tr>
+                    <hr>
+                  
+                             
+<hr>
+                   {% endfor %}
+               
+        </div>
+{% endblock %}
