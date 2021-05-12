@@ -36,16 +36,16 @@ class Article
      * @ORM\Column(type="string", length=100, nullable=true)
      */
     private $Image;
-
-    /**
+     /**
      * @ORM\Column(type="string", length=60)
      */
-    private $Category;
-    /**
-     * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="article")
-     */
- 
+
     private $Contact;
+    /**
+    * @ORM\ManyToOne(targetEntity="App\Entity\Category", inversedBy="article")
+    */
+   
+    private $Category;
 
     public function getId(): ?int
     {
@@ -112,12 +112,12 @@ class Article
         return $this;
     }
 
-    public function getCategory(): ?string
+    public function getCategory(): ?Category
     {
         return $this->Category;
     }
 
-    public function setCategory(string $Category): self
+    public function setCategory(?Category $Category): self
     {
         $this->Category = $Category;
 

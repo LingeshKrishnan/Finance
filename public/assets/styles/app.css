@@ -24,18 +24,18 @@ nav.navbar.navbar-expand-lg{
 }
 
 .navbar-brand {
-    color:#275929;
+    color:black;
     font-weight:900;
 }
 .navbar-brand :hover{
-    color:#275929;
+    color:#4F7978;
     font-weight:900;
 }
 li {
     list-style: none;
 }
 .nav-item a:hover{
-   background:green;
+   background:#4F7978;
    color: white;
 }
 

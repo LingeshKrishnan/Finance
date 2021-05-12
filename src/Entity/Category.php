@@ -24,7 +24,7 @@ class Category
 
     private $article;
     /**
-     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="Category")
+     * @ORM\OneToMany(targetEntity="App\Entity\Article", mappedBy="article")
      */
 
     public function getId(): ?int
